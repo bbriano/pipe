@@ -28,7 +28,7 @@ func main() {
 
 func delay() {
 	flags := flag.NewFlagSet("delay", flag.ExitOnError)
-	sleepTime := flags.Duration("t", 1e9, "Sleep time before emitting lines")
+	sleepTime := flags.Duration("t", time.Second, "Sleep time before emitting lines")
 	flags.Parse(os.Args[2:])
 
 	s := bufio.NewScanner(os.Stdin)
@@ -41,7 +41,7 @@ func delay() {
 
 func throttle() {
 	flags := flag.NewFlagSet("throttle", flag.ExitOnError)
-	waitTime := flags.Duration("t", 1e9, "Wait time between emitting lines")
+	waitTime := flags.Duration("t", time.Second, "Wait time between emitting lines")
 	flags.Parse(os.Args[2:])
 
 	t := time.Unix(0, 0)
