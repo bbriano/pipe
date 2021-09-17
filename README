@@ -1,0 +1,11 @@
+Pipe
+====
+
+Pipe alters Unix pipes.
+
+Use:
+	$ cat LICENSE | pipe delay -t 50ms | pipe throttle -t 200ms
+	Copyright (c) 2021 Briano Goestiawan
+	granted, provided that the above copyright notice and this
+	ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL
+	RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
